@@ -40,3 +40,31 @@ int encontrarMejorAlumno(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS]) {
     return mejorAlumno;
 }
 
+
+int main() {
+    // Base de datos de calificaciones
+    float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS] = {
+        {10, 8.5, 9},
+        {9, 8, 9.5},
+        {6, 8, 7},
+        {10, 9, 9},
+        {8, 9, 10},
+        {4, 8, 7},
+        {9.5, 9, 9.8},
+        {7.8, 8, 8.9},
+        {5.5, 6, 8},
+        {2, 8, 6},
+        {5, 9, 6.9},
+        {4.5, 10, 9},
+        {6, 8, 9,9},
+        {5, 7, 9},
+        {8.1, 5, 9},
+        {9, 7, 7},
+        {6.8, 7.5, 9},
+        {5.5, 8, 9},
+        {7, 5, 8},
+        {4, 5, 10},
+        {2, 5, 9},
+        {10, 9,9, 8},
+        {6, 5, 8},
+
