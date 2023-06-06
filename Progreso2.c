@@ -24,3 +24,19 @@ void calcularPromedioGrupo(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS], flo
         promedios[i] = sum / NUM_ALUMNOS;
     }
 }
+
+// Función para encontrar el alumno con el mayor promedio de calificación durante todo semestre
+int encontrarMejorAlumno(float calificaciones[NUM_ALUMNOS][NUM_PROGRESOS]) {
+    float maxPromedio = 0;
+    int mejorAlumno = 0;
+    int i;
+    for (i = 0; i < NUM_ALUMNOS; i++) {
+        float promedio = calcularPromedioAlumno(calificaciones[i]);
+        if (promedio > maxPromedio) {
+            maxPromedio = promedio;
+            mejorAlumno = i;
+        }
+    }
+    return mejorAlumno;
+}
+
