@@ -56,7 +56,7 @@ int main() {
         {2, 8, 6},
         {5, 9, 6.9},
         {4.5, 10, 9},
-        {6, 8, 9,9},
+        {6, 8, 9},
         {5, 7, 9},
         {8.1, 5, 9},
         {9, 7, 7},
@@ -65,6 +65,33 @@ int main() {
         {7, 5, 8},
         {4, 5, 10},
         {2, 5, 9},
-        {10, 9,9, 8},
+        {10, 9, 8},
         {6, 5, 8},
+
+    };
+
+    // Obtener el promedio de calificaciones de cada alumno durante todo semestre
+    printf("Promedio de calificaciones de cada alumno:\n");
+    int i;
+    for (i = 0; i < NUM_ALUMNOS; i++) {
+        float promedio = calcularPromedioAlumno(calificaciones[i]);
+        printf("Alumno %d: %.2f\n", i+1, promedio);
+    }
+
+    // Obtener la nota promedio del grupo de estudiantes para cada progreso
+    float promedios[NUM_PROGRESOS];
+    calcularPromedioGrupo(calificaciones, promedios);
+    printf("\nPromedio del grupo para cada progreso:\n");
+    for (i = 0; i < NUM_PROGRESOS; i++) {
+        printf("Progreso %d: %.2f\n", i+1, promedios[i]);
+    }
+
+    // Encontrar el alumno que obtuvo el mayor promedio de calificación durante el semestre
+    int mejorAlumno = encontrarMejorAlumno(calificaciones);
+    printf("\nEl alumno con el mayor promedio durante el semestre es el alumno %d\n", mejorAlumno+1);
+
+    return 0;
+}
+
+
 
